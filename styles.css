@@ -1,0 +1,31 @@
+
+body {
+  width: 250px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+#new-todo {
+  width: 70%;
+  padding: 5px;
+}
+
+#add-todo {
+  width: 25%;
+  padding: 5px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.todo-text {
+  flex: 1;
+  margin-right: 10px;
+}
