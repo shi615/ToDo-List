@@ -2,4 +2,4 @@
 
 ## Feature
 - can add, delete, edit the ToDo.
-- can change the background color
+- can change the background color.
