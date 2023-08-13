@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "ToDo List",
   "version": "1.0",
-  "description": "一个简单的 ToDo List Chrome 扩展程序。",
+  "description": "A simple ToDo List Chrome extension.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

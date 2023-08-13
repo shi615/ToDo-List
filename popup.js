@@ -9,6 +9,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById("settings-icon").addEventListener("click", function() {
+	const settingsPanel = document.getElementById("settings-panel");
+	if (settingsPanel.style.display === "none") {
+		settingsPanel.style.display = "block";
+	} else {
+		settingsPanel.style.display = "none";
+	}
+});
+
+document.getElementById("bg-color-selector").addEventListener("change", function(event) {
+	const selectedColor = event.target.value;
+	document.body.style.backgroundColor = selectedColor;
+
+	chrome.storage.sync.set({backgroundColor: selectedColor}, function() {
+		console.log("Background color saved:", selectedColor);
+	});
+});
+
 document.getElementById('add-todo').addEventListener('click', function() {
     let value = document.getElementById('new-todo').value.trim();
     if (value) {
@@ -27,6 +45,16 @@ document.getElementById('new-todo').addEventListener('keydown', function(event) 
             document.getElementById('new-todo').value = '';
         }
     }
+});
+
+// on popup load, retrieve the saved background color and apply it
+window.addEventListener("load", function() {
+	chrome.storage.sync.get("backgroundColor", function(data) {
+		if (data.backgroundColor) {
+			document.body.style.backgroundColor = data.backgroundColor;
+			document.getElementById("bg-color-selector").value = data.backgroundColor;
+		}
+	});
 });
 
 function addTodoToUI(value) {

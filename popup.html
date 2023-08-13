@@ -1,18 +1,25 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <meta charset="UTF-8">
-</head>
-<body>
-  <h2>ToDo List</h2>
-<ul id="todo-list">
-</ul>
-<div id="add-container">
-  <input type="text" id="new-todo" placeholder="Write and Enter">
-  <button id="add-todo">Add</button>
-</div>
-  <script src="popup.js"></script>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h2>ToDo List <span id="settings-icon">⚙️</span></h2>
+		<div id="settings-panel" style="display: none;">
+			<label>Choose background color:</label>
+			<select id="bg-color-selector">
+				<option value="white">White</option>
+				<option value="lightblue">Light Blue</option>
+				<option value="lightpink">Light Pink</option>
+			</select>
+		</div>
+		<ul id="todo-list">
+		</ul>
+		<div id="add-container">
+			<input type="text" id="new-todo" placeholder="Write and Enter">
+			<button id="add-todo">Add</button>
+		</div>
+		<script src="popup.js"></script>
+	</body>
 </html>
