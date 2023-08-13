@@ -45,7 +45,7 @@ function addTodoToUI(value) {
 
     let deleteButton = document.createElement('button');
     deleteButton.className = 'delete-todo';
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'Done';
     li.appendChild(deleteButton);
 
     ul.appendChild(li);
